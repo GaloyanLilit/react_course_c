@@ -1,22 +1,4 @@
-.d1{
-  border:1px solid black;
-  width: 700px;
-  height: 670px;
-  margin: 50px auto;
-  background-image: url('./img/55.jpg');
- 
-}
- .d2{
-  margin: -700px 500px;
-} 
-.d3{
-  margin: 250px 200px;
-
-}
-.li1{
-  list-style-type: none;
-
-}
-.d4{
-  margin: -200px 200px
+body{
+    background: url(./img/8.jpg) no-repeat;
+    background-size: cover; 
 }
