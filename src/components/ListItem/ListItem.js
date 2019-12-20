@@ -1,16 +1,20 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 import './ListItem.css';
 
 
-const ListItem = ({item}) => {
+class ListItem extends Component {
+        render (){
+            const {item} = this.props;
+            let liClasses = '';
 
-    const dataStyle = item.important ? 'red' : '#000';
-    const testStyle = item.isDone ? 'line-through' : 'none'
+
+    liClasses += item.important ? 'important' : '';
+    liClasses += item.isDone ? 'done' : ''
    
 
     return (
-    <li style={{'text-decoration':testStyle,color:dataStyle}}>
+    <li className={liClasses}>
         {item.title}
         <button className='btn btn-danger ml-5 rounded-circle border-info'>
             <i className='fa fa-remove'></i></button>
@@ -21,6 +25,7 @@ const ListItem = ({item}) => {
     );
     
     };
+}
    
     export default ListItem;
 

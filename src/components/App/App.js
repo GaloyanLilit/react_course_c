@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Filter from  '../Filter/Filter';
-import List from  '../List/List';
-import AddItem from  '../AddItem/AddItem';
+import Filter from  '../Filter';
+import List from  '../List';
+import AddItem from  '../AddItem';
+import Test from '../Test/Test'
 
 import './App.css';
 
@@ -32,7 +33,7 @@ const dataArr = [
         id: 4,
         title: 'Todo list 4',
         isDone: true,
-        important: true
+        important: false
     },
 ];
 
@@ -41,6 +42,7 @@ const App = () => {
     <div className='container mt-5 mr-5'>
         <h1 className='ml-5 text-danger'>Add Item</h1>
         < Filter/>
+      <Test hello="Hello Gyumri"/>
         <List listData={dataArr}/>
         <AddItem/>
             </div>
