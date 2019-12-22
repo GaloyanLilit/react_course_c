@@ -3,19 +3,18 @@ import React from 'react';
 import './Filter.css';
 
 const Filter = () => {
-
-    return(
-    <div>
-    <h3 className='text-primary ml-5'>Search</h3>
-    <input type='text'className='w-50 ml-5 mr-5'/>
-        <button className='btn btn-info ml-3'>Search</button>
-        <hr/>
-        <button className='btn btn-danger ml-5'>Important</button>
-        <button className='btn btn-primary ml-3'>Active</button>
+  return (
+    <div className="row filter-data">
+      <div className="form-group col-md-7">
+        <input type="text" className="form-control-plaintext" placeholder="Type to Search" />
+      </div>
+      <div className="form-group col-md-5">
+        <button className="btn btn-outline-primary mb-2 active">All</button>
+        <button className="btn btn-outline-primary mb-2">Active</button>
+        <button className="btn btn-outline-primary mb-2">Done</button>
+      </div>
     </div>
-    );
-    
-    };
+  );
+};
 
-    export default Filter;
-
+export default Filter;
