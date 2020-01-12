@@ -1,61 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import Header from '../Header';
-import Filter from '../Filter';
-import List from '../List';
-import AddItem from '../AddItem';
+import Slide from  '../Filter';
+import List from  '../List';
+import Home from  '../Home';
+
 
 import './App.css';
 
-export default class App extends Component {
-  state = {
-    todoData: [
-      {
-        id: 1,
-        title: 'Սովորել React',
-       
-      },
-      {
-        id: 2,
-        title: 'Կոֆե խմել',
-        
-      },
-      {
-        id: 3,
-        title: 'Սովորել Node.js',
-       
-      },
-      {
-        id: 4,
-        title: 'Հաց ուտել',
-        
-      }
-    ]
-  };
 
-  onDeleteItem = (id) => {
-    const { todoData } = this.state;
-    const idx = todoData.findIndex((obj) => obj.id === id);
-    todoData.splice(idx,1);
-    this.setState(todoData);
-   console.log(idx);
-    
-    //----------tnain
-  }
 
-  render() {
+const App = () => {
     return (
-      <div className="container">
-        <Header />
-        <Filter />
-        <List todoList={this.state.todoData}
-        onDeleteItem={this.onDeleteItem}
-        />
-        <AddItem />
-      </div>
+    <div className='container mt-5 mr-5'>
+        <Home/>
+        <Slide/>
+        <List/>
+            </div>
+    
     );
-  }
-}
+    
+    };
 
-
+    export default App;
 

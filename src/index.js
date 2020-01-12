@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import App from './components/App'
+
 import './index.css';
 
-import App from './components/App';
+//ListItem/ListItem.js
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+);
+
+
